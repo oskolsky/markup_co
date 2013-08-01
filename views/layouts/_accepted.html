@@ -1,0 +1,14 @@
+<div class="overlay"></div>
+<div class="dialog">
+  <header class="dialog_header">Ваш заказ принят</header>
+  <section class="dialog_section">В ближайшее время мы<br>свяжемся с Вами.</section>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('.overlay, .dialog').click(function() {
+      $('.overlay').hide();
+      $('.dialog').hide();
+    });
+  });
+</script>

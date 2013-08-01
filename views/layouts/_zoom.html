@@ -1,0 +1,53 @@
+<div class="overlay" style="display: none; background: #000; opacity: .5; z-index: 9999;"></div>
+
+<div class="dialog-zoom">
+  <a href="#" class="dialog-zoom_close"><img src="/img/zoom-close.png" alt=""></a>
+  <section class="zoom-slider">
+    <div class="zoom-slider_container">        
+      <section class="zoom-slider-section">
+        <div class="slider">
+          <div class="slides">
+            <div class="slide"><img src="/img/fake/photo/green/img-613-347_1.jpg" alt="" width="920" height="521"></div>
+            <div class="slide"><img src="/img/fake/photo/green/img-613-347_2.jpg" alt="" width="920" height="521"></div>
+            <div class="slide"><img src="/img/fake/photo/green/img-613-347_3.jpg" alt="" width="920" height="521"></div>
+          </div>
+        </div>
+      </section>
+      <footer class="zoom-slider-footer">
+        <div class="controls">
+          <div class="controls_i controls_i__prev"><img src="/img/blank.gif" alt=""></div>
+          <div class="controls_i controls_i__next"><img src="/img/blank.gif" alt=""></div>
+        </div>
+        <nav class="zoom-slider-buls">
+          <span class="zoom-slider-buls_i zoom-slider-buls_i__current"><img src="/img/fake/photo/green/img-128-72_1.jpg"></span>
+          <span class="zoom-slider-buls_i"><img src="/img/fake/photo/green/img-128-72_2.jpg"></span>
+          <span class="zoom-slider-buls_i"><img src="/img/fake/photo/green/img-128-72_3.jpg"></span>
+        </nav>
+      </footer>
+    </div>
+  </section>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+
+    var 
+        $overlay = $('.overlay'),
+        $dialog  = $('.dialog-zoom');
+
+    $dialog.hide();
+    
+    $('#zoom-open').click(function() {
+      $overlay.show();
+      $dialog.show();
+      $('.products-slider').iosSlider('update');
+      return false;
+    });
+
+    $('.overlay, .dialog-zoom_close').click(function() {
+      $overlay.hide();
+      $dialog.hide();
+    });
+
+  });
+</script>

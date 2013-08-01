@@ -1,0 +1,7 @@
+.hidden-phone,
+.visible-desktop {display: none !important;}
+.hidden-desktop,
+.visible-phone {display: inherit !important;}
+
+.header {position: static;}
+.section {padding-top: 0rem;}

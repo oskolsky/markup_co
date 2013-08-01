@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]><html lang="ru-RU" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="ru-RU" class="no-js ie9"><![endif]-->
+<html lang="ru-RU" class="no-js">
+  <head>
+    <title>Оформление заказа / Смоленский Очкарик</title>
+    <!--#include virtual='/views/layouts/_head.html' -->
+  </head>
+  <body>
+    <!--#include virtual="/views/layouts/_alerts.html" -->
+    <!--#include virtual="/views/layouts/_header.html" -->
+    <section id="section" class="section" role="main">
+      <div class="ctn">
+
+        <nav class="breadcrumbs">
+          <a href="/" class="breadcrumbs_i">Главная</a>
+          <span class="breadcrumbs_i breadcrumbs_i__current">Оформление заказа</span>
+        </nav>
+
+        <h1 class="ta-c m-b_4">Оформление заказа</h1>
+
+        <form class="form">
+          <div class="cols-10 block-c">
+            <div class="cols">
+              <div class="cols-5 mod">
+                <div class="form_row">
+                  <label class="form_label">Имя, Фамилия</label>
+                  <input type="text" class="form_text cols-5" placeholder="Гришка Иванов">
+                </div>
+                <div class="form_row">
+                  <label class="form_label">Адрес</label>
+                  <input type="text" class="form_text cols-5" placeholder="Кирова 35, подъезд 3, кв. 45">
+                </div>
+                <div class="form_row m-b_6">
+                  <label class="form_label">Телефон для связи</label>
+                  <input type="text" class="form_text cols-5" placeholder="+7 000 000 00 00">
+                </div>
+                <div class="form_row">
+                  <input type="submit" class="form_button form_button__small form_button__ordering" value="Отправить">
+                </div>
+              </div><div class="cols-5 mod">
+                
+                <div class="form_row">
+                  <label class="form_label">Город</label>
+                  <div class="form_select__fake form_el__fake cols-5" data-valid="false">
+                    <p>&nbsp;</p>
+                    <select class="form_select__real form_el__real">
+                      <option selected>Выберите</option>
+                      <option>Смоленск</option>
+                      <option>Вязьма</option>
+                      <option>Ярцево</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="form_row">
+                  <label class="form_label">Электронная почта</label>
+                  <input type="text" class="form_text cols-5" placeholder="primer@example.com" data-valid="false">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+    <!--#include virtual='/views/layouts/_footer.html' -->
+  </body>
+</html>

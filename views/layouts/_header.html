@@ -1,0 +1,83 @@
+<header class="header" role="banner">
+  <div class="consultation" style="display: none;">
+    <div class="ctn">
+      <div class="cols">
+        <div class="consultation_i cols-3 mod">
+          <div class="consultation_title">Работаем</div>
+          <div class="consultation_details">c 9:00 до 20:00</div>
+        </div><div class="consultation_i cols-3 mod">
+          <div class="consultation_title">Напишите нам по адресу</div>
+          <div class="consultation_details"><a href="mailto:smol@ochkarik.ru">smol@ochkarik.ru</a></div>
+        </div><div class="consultation_i cols-3 mod">
+          <div class="consultation_title">Позвоните нам по телефону</div>
+          <div class="consultation_details">(4812) 64-85-04</div>
+        </div><div class="consultation_i cols-3 mod">
+          <div class="consultation_title">Skype</div>
+          <div class="consultation_details">Smolochkarik</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ctn">
+    <div class="menus clearfix">
+      <menu class="main-menu cols-6 f-l">
+        <li class="main-menu_i main-menu_i__logo"><a href="/" class="main-menu_a"><img src="/img/logo.png" alt="Смоленский Очкарик"></a></li>
+        <li class="main-menu_i"><a href="/glasses.html" class="main-menu_a main-menu_a__current">Очки</a></li>
+        <li class="main-menu_i dropdown-container">
+          <a href="javascript: void(null);" class="main-menu_a dropdown-link">Линзы</a>
+          <menu class="dropdown-menu dropdown-menu__left" style="display: none;">
+            <li class="dropdown-menu_i"><a href="/lenses.html" class="dropdown-menu_a dropdown-menu_a__eye dropdown-menu_a__arrowed"><i class="ico-37 ico-37__eye dropdown-menu_ico dropdown-menu_ico__eye"></i>Контактные<br>линзы</a></li>
+            <li class="dropdown-menu_i"><a href="/lenses.html" class="dropdown-menu_a dropdown-menu_a__glasses"><i class="ico-37 ico-37__glasses dropdown-menu_ico dropdown-menu_ico__glasses"></i>Очковые<br>линзы</a></li>
+          </menu>
+        </li>
+        <li class="main-menu_i"><a href="/accessories.html" class="main-menu_a">Аксессуары</a></li>
+      </menu><menu class="sub-menu cols-6 f-r">
+        <li class="sub-menu_i"><a href="#" class="sub-menu_a sub-menu_a__consultation">Консультация</a></li>
+        <li class="sub-menu_i dropdown-container bag-show" style="padding: 10px 0;">
+          <a href="/bag.html" class="sub-menu_a dropdown-link sub-menu_a__bag">Корзина <span class="sub-menu_count">99</span></a>
+          <menu class="dropdown-menu dropdown-menu__right" style="display: none;">
+
+            <!-- Немного говнокода to-do :] -->
+            <span class="dropdown-menu_i__arrowed"></span>
+            
+            <!--#include virtual="/views/common/_bag_items.html" -->
+            <!--#include virtual="/views/common/_bag_items.html" -->
+            <!--#include virtual="/views/common/_bag_items.html" -->
+            <!--#include virtual="/views/common/_bag_items.html" -->
+            <!--#include virtual="/views/common/_bag_items.html" -->
+            <!--#include virtual="/views/common/_bag_items.html" -->            
+
+            <li class="dropdown-menu_i bag-show_controls" style="display: none;">
+              <a href="#" class="bag-show_control bag-show_control__up bag-show_control__current" data-action="up"></a>
+              <a href="#" class="bag-show_control bag-show_control__down" data-action="down"></a>
+            </li>
+
+            <li class="dropdown-menu_i bag-show_footer">
+              <div class="bag-show_summ"><b>Итог:</b> 1900 Р</div>
+              <a href="/bag.html" class="form_button form_button__small form_button__showbag">Просмотреть</a>
+            </li>
+
+          </menu>
+        </li>
+      </menu>
+    </div>
+  </div>
+</header>
+
+<script type="text/javascript">
+  $(function() {
+    $('.dropdown-container').hover(function() {
+      $(this).find('.dropdown-menu').slideDown();
+    }, function() {
+      $(this).find('.dropdown-menu').slideUp();
+    });
+  });
+</script>
+
+<!-- Нужно только для теста, при интеграции удалить -->
+<script type="text/javascript">
+  $(function() {
+    var i = 1;
+    $('.bag-show_i').each(function() {$(this).find('.test').text(i++);});
+  });
+</script>

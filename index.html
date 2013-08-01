@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!--[if IE 8]><html lang="ru-RU" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="ru-RU" class="no-js ie9"><![endif]-->
+<html lang="ru-RU" class="no-js">
+  <head>
+    <title>Смоленский Очкарик</title>
+    <!--#include virtual="/views/layouts/_head.html" -->
+  </head>
+  <body>
+    <!--#include virtual="/views/layouts/_alerts.html" -->
+    <!--#include virtual="/views/layouts/_header.html" -->
+    <section id="section" class="section" role="main">
+      <div class="ctn">
+
+        <div class="slider index-slider">
+          <div class="slides">
+            <div class="slide"><a href="#"><img src="/img/slider/slide_01.jpg" alt=""></a></div>
+            <div class="slide"><a href="#"><img src="/img/slider/slide_01.jpg" alt=""></a></div>
+            <div class="slide"><a href="#"><img src="/img/slider/slide_01.jpg" alt=""></a></div>
+          </div>
+          <div class="controls">
+            <div class="controls_i controls_i__prev"><img src="/img/blank.gif" alt=""></div>
+            <div class="controls_i controls_i__next"><img src="/img/blank.gif" alt=""></div>
+          </div>
+        </div>
+
+        <div class="services cols">
+          <figure class="service cols-4 mod">
+            <img src="/img/blank.gif" alt="" class="ico-66 ico-66__craft service__ico">
+            <h4>Бесплатное изготовление очков</h4>
+            <a href="#" class="service__arrow"><img src="/img/blank.gif" alt=""></a>
+          </figure><figure class="service cols-4 mod">
+            <img src="/img/blank.gif" alt="" class="ico-66 ico-66__brand service__ico">
+            <h4>Лучшие мировые бренды очков и контактных линз</h4>
+            <a href="#" class="service__arrow"><img src="/img/blank.gif" alt=""></a>
+          </figure><figure class="service cols-4 mod">
+            <img src="/img/blank.gif" alt="" class="ico-66 ico-66__delivery service__ico">
+            <h4>Бесплатная доставка и&nbsp;возврат</h4>
+            <a href="#" class="service__arrow"><img src="/img/blank.gif" alt=""></a>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+    <!--#include virtual='/views/layouts/_footer.html' -->
+
+    <script type="text/javascript">
+      $(function() {
+
+        $('.index-slider').each(function() {
+          var _this = $(this);
+          _this.iosSlider({
+            snapSlideCenter: true,
+            snapToChildren: true,
+            autoSlide: true,
+            navPrevSelector: $('.controls_i__prev'),
+            navNextSelector: $('.controls_i__next'),
+            onSlideComplete: function(args) {
+              _this.find('.controls_i__prev, .controls_i__next').show();
+              if(args.currentSlideNumber == 1) {
+                _this.find('.controls_i__prev').hide();
+              } else if(args.currentSliderOffset == args.data.sliderMax) {
+                _this.find('.controls_i__next').hide();
+              }
+            },
+            onSliderLoaded: function(args) {
+              if (args.data.numberOfSlides > 1) {
+                _this.find('.controls_i__next').show();
+              }
+            }
+          });
+        });
+
+        $('.index-slider').hover(function() {
+          $(this).find('.controls_i').animate({width: '35px'})
+        }, function() {
+          $(this).find('.controls_i').animate({width: 0})
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

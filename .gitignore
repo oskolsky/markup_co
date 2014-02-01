@@ -4,6 +4,5 @@
 # Project file
 config.txt
 *.log
-
-# Grunt
-node_modules
+cgi-bin
+logs
